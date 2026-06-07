@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"os"
 )
 
 func manoFunkcija(w http.ResponseWriter, r *http.Request) {
@@ -12,7 +13,12 @@ func manoFunkcija(w http.ResponseWriter, r *http.Request) {
 func main() {
 
 	http.HandleFunc("/", manoFunkcija)
-	fmt.Println("Paspauskite ant linko http://localhost:8080")
 
-	http.ListenAndServe(":8080", nil)
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+	fmt.Println("Serveris paleistas ant render")
+
+	http.ListenAndServe(":"+port,, nil)
 }
