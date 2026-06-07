@@ -7,7 +7,7 @@ import (
 )
 
 func manoFunkcija(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Testukas mano serveris veikia?")
+	fmt.Fprintf(w, "Kristupas Vi Lambada funkcija 2026?")
 }
 
 func main() {
