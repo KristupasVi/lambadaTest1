@@ -18,7 +18,8 @@ func main() {
 	if port == "" {
 		port = "8080"
 	}
+
 	fmt.Println("Serveris paleistas ant render")
 
-	http.ListenAndServe(":"+port,, nil)
+	http.ListenAndServe(":"+port, nil)
 }
